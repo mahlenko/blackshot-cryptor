@@ -1,0 +1,35 @@
+.tabs-imitation {
+    padding: 3px;
+    display: flex;
+    background: $fillMedium;
+    border-radius: $radius/2;
+    margin-bottom: 4rem;
+
+    .tab {
+        color: $blueDark;
+        position: relative;
+        width: 100%;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: $radius/3;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background, color;
+        transition-duration: $duration;
+        overflow: hidden;
+        margin: 4px;
+
+        &:hover {
+            color: $blueLight;
+        }
+
+        &:hover, &.active {
+            background: $fillLight
+        }
+    }
+}
