@@ -1,0 +1,189 @@
+$primary: #3656AF;
+$success: #00B112;
+
+@import "~bootstrap";
+
+@import "navigation";
+@import "list-group_table";
+@import "list-group-sortable";
+@import "datepicker";
+@import "~magnific-popup/dist/magnific-popup.css";
+@import "dashboard";
+@import "finder";
+@import "product";
+@import "~select2";
+@import "~select2-bootstrap-5-theme/src/include-all";
+@import "fake-control";
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+//@import "~@fortawesome/fontawesome-free/scss/solid";
+
+/**
+ * Select2
+ */
+.select2-results__option {
+    /* не отмечаются disabled option */
+    &[aria-disabled] {
+        @extend .text-secondary;
+        opacity: .5;
+    }
+}
+
+.select2-results__group {
+    background-color: $light;
+    display: block;
+    font-weight: bold !important;
+    color: $dark !important;
+}
+
+.select2-container--bootstrap-5 {
+    .select2-dropdown {
+        .select2-results__options {
+            .select2-results__option {
+                &[aria-selected="true"] {
+                    .text-secondary {
+                        color: rgba(255,255,255, .7) !important
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-floating {
+    .select2-container--bootstrap-5 {
+        .select2-selection {
+            height: $form-floating-height;
+            padding: $form-floating-padding-y $form-floating-padding-x;
+
+            > .select2-selection__rendered {
+                margin-top: .6rem;
+                margin-left: .25rem;
+            }
+        }
+    }
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f6f9fb;
+    font-family: 'Raleway', sans-serif;
+    * {
+        font-variant-numeric: lining-nums;
+    }
+}
+
+#app {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .flex-md-row;
+    @extend .p-1;
+    @extend .p-md-1;
+    box-sizing: border-box;
+    min-height: inherit;
+    color: #444669;
+
+    .sidebar-left {
+        @extend .p-md-4;
+    }
+
+    .account-dropdown {
+        @include media-breakpoint-down(md) {
+            border-bottom: none !important;
+        }
+    }
+
+    .container-body {
+        @extend .p-3;
+        @extend .p-md-5;
+        @extend .m-md-3;
+        @extend .ms-md-0;
+        border-radius: 1rem;
+        background-color: white;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+
+.tab-content {
+    table.table {
+        tr td:first-child:not([colspan]) {
+            width: 30%;
+            text-align: right;
+            @include media-breakpoint-up(md) {
+                padding-left: 2rem;
+            }
+            label {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.btn-success {
+    color: white;
+    &:hover {
+        color: #faffe9;
+    }
+}
+
+.btn-dark {
+    border-color: transparent;
+    background-color: #5a5a5a;
+    color: white;
+    &:hover {
+        background-color: #757575;
+    }
+}
+
+.btn {
+    padding-top: .42rem;
+    padding-bottom: .42rem;
+    font-size: .94rem;
+    border-radius: .36rem;
+}
+
+.btn-sm, .btn-group-sm .btn {
+    padding: .2rem .6rem .2rem .6rem;
+}
+
+.form-floating {
+    color: $secondary;
+}
+
+code {
+    font-size: inherit;
+}
+
+.badge-dot {
+    border-radius: .5rem;
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    margin: .1rem;
+}
+
+.link-ajax {
+    @extend .text-decoration-none;
+    @extend .text-nowrap;
+    border-bottom: 1px dashed;
+    padding-bottom: .2px;
+}
+
+.form-awesome-control {
+    position: relative;
+    .label-awesome {
+        top: .5rem;
+        left: $input-padding-x;
+        position: absolute;
+    }
+
+    .form-control {
+        padding-left: 2rem;
+    }
+}

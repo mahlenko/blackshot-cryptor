@@ -1,0 +1,101 @@
+.list-group-table {
+    margin: 0;
+    padding: 0;
+
+    .list-item {
+        @extend .d-flex;
+        @extend .flex-column;
+        @extend .align-items-start;
+        @extend .flex-md-row;
+        @extend .border-bottom;
+        background-color: white;
+
+        padding: .5rem;
+        margin: 0;
+        list-style: none;
+
+        .item-icon {
+            @extend .d-flex;
+            @extend .rounded;
+            @extend .align-items-center;
+            @extend .justify-content-center;
+            margin-right: .5rem;
+            padding: 0;
+            width: 24px;
+            min-width: 24px;
+            overflow: hidden;
+
+            &.cover-image {
+                border: 2px solid $light;
+                width: 50px;
+                height: 50px;
+                padding: 2px;
+                margin-right: 1rem;
+                cursor: zoom-in;
+                transition: border-color .2s ease-in-out;
+
+                &:hover {
+                    border-color: transparentize($primary, .8);
+                }
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &:before {
+                content: "";
+                padding-top: 100%;
+                float: left;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .link-edit {
+            .fas, .svg-inline--fa {
+                opacity: 0;
+                margin-left: .5rem;
+                transition: opacity .2s ease-in;
+            }
+        }
+
+        &:hover {
+            .link-edit {
+                .fas, .svg-inline--fa {
+                    opacity: 1;
+                }
+            }
+        }
+
+        & > * {
+            padding: 0 1rem;
+        }
+
+        /* draggable */
+        *[data-drag] {
+            color: $secondary;
+            cursor: move;
+        }
+    }
+
+    .draggable {
+        &-mirror {
+            opacity: .5;
+        }
+
+        &--original {
+            background-color: $light;
+            opacity: .5;
+        }
+
+        &-source--is-dragging {
+            border: 2px solid $warning !important;
+        }
+    }
+}

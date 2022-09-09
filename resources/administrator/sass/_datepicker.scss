@@ -1,0 +1,40 @@
+@import "~air-datepicker/dist/css/datepicker.min.css";
+
+.datepicker {
+    &--day {
+        &-name {
+            color: $primary;
+        }
+    }
+
+    &--button {
+        color: $primary;
+    }
+
+
+    .-current- {
+        color: $info;
+    }
+
+    .-weekend- {
+        color: $red;
+        &.-selected-,
+        &.-selected-:hover {
+            color: white;
+            background-color: $red;
+        }
+    }
+
+    .-selected- {
+        background-color: $primary;
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    &--cell-day {
+        &.-selected-, &.-selected-.-current- {
+            background-color: $primary;
+        }
+    }
+}

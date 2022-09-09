@@ -1,0 +1,43 @@
+x-widget, x-video, x-navigation {
+    border-radius: .2rem;
+    border: 1px solid;
+    display: block;
+    font-size: .9rem;
+    margin: .5rem 0;
+    padding: .4rem .8rem;
+    overflow-x: hidden;
+}
+
+x-widget, x-video {
+    border-color: #feebb0;
+    background: #fef9e7;
+}
+
+x-navigation {
+    border-color: #d2efe1;
+    background: #e7fef3;
+}
+
+x-widget:before, x-video:before, x-navigation:before {
+    font-weight: bold;
+}
+
+x-widget:before {
+    content: "Виджет: ";
+}
+
+x-video:before {
+    content: "Видео: ";
+}
+
+x-navigation:before {
+    content: "Меню: ";
+}
+
+x-widget:after, x-video:after {
+    content: attr(name);
+}
+
+x-navigation:after {
+    content: attr(key);
+}

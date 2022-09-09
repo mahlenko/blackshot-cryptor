@@ -1,0 +1,6 @@
+.dashboard {
+    .welcome-banner {
+        @extend .rounded;
+        padding: 2rem 3rem;
+    }
+}

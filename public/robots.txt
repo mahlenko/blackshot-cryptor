@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: / # удалить по запуску сайта
+Disallow: /*dashboard
+Disallow: *?page=*
+Disallow: /*search
+Disallow: /*login
+Disallow: /*logout
+Disallow: /*registration
+Disallow: /*password
+Disallow: /*storage
+
+# Sitemap: https://{_domain_}/sitemap.xml

@@ -1,0 +1,44 @@
+{
+    "private": true,
+    "scripts": {
+        "admin-dev": "mix",
+        "admin-development": "npm run admin-dev",
+        "admin-watch": "mix watch",
+        "admin-watch-poll": "mix watch -- --watch-options-poll=1000",
+        "admin-hot": "mix watch --hot",
+        "admin-prod": "npm run production",
+        "admin-production": "mix --production",
+        "dev": "mix --mix-config=resources/views/web/resources/webpack.mix.js",
+        "watch": "mix watch --mix-config=resources/views/web/resources/webpack.mix.js",
+        "prod": "mix --production --mix-config=resources/views/web/resources/webpack.mix.js"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.9.3",
+        "axios": "^0.21",
+        "bootstrap": "^5.1.0",
+        "browser-sync": "^2.27.5",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "jquery": "^3.2",
+        "laravel-mix": "^6.0.28",
+        "lodash": "^4.17.19",
+        "popper.js": "^1.12",
+        "postcss": "^8.3.6",
+        "resolve-url-loader": "^2.3.2",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
+        "select2": "~4.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "@shopify/draggable": "^1.0.0-beta.8",
+        "air-datepicker": "^2.2.3",
+        "imask": "^6.2.2",
+        "lightgallery": "^2.3.0",
+        "magnific-popup": "^1.1.0",
+        "nouislider": "^15.1.0",
+        "select2-bootstrap-5-theme": "^1.1.1",
+        "swiper": "^6.8.4",
+        "tinymce": "^5.7.0",
+        "wnumb": "^1.2.0"
+    }
+}

@@ -1,0 +1,46 @@
+.sidebar-left {
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                @extend .rounded;
+                color: $dark;
+                margin: .2rem;
+                padding: .3rem .7rem;
+
+                &.active {
+                    @extend .shadow-sm;
+                    background-color: white;
+                    color: $dark;
+
+                    .nav-icon {
+                        color: $danger;
+                    }
+                }
+
+                &.dropdown-toggle {
+                    &.show {
+                        background-color: $primary;
+                        color: white;
+                    }
+                }
+            }
+
+            .nav-icon {
+                display: inline-block;
+                width: 1.8rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.dropdown-item {
+    .dropdown-icon {
+        @extend .nav-icon;
+        text-align: left;
+    }
+}
+
+.dropdown-menu {
+    @extend .shadow-sm;
+}

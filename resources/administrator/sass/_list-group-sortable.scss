@@ -1,0 +1,55 @@
+.list-group-sortable {
+    @extend .mt-3;
+    @extend .mb-2;
+    @extend .p-0;
+
+    .list-item {
+        @extend .d-flex;
+        @extend .align-items-center;
+        padding-left: 0;
+
+        *:not(.name) {
+            //padding-left: .5rem;
+            //padding-right: .5rem;
+        }
+
+        .fas, .far {
+            svg {
+                padding: 0 .5rem;
+            }
+        }
+
+        .name {
+            padding-right: .5rem;
+        }
+    }
+
+    &.sortable-primary {
+        .list-item:first-child {
+            .name {
+                font-weight: bold;
+            }
+
+            /* draggable */
+            *[data-drag] {
+                color: $secondary;
+                cursor: move;
+            }
+        }
+
+        .draggable {
+            &-mirror {
+                opacity: .5;
+            }
+
+            &--original {
+                background-color: $light;
+                opacity: .5;
+            }
+
+            &-source--is-dragging {
+                border: 2px solid $warning !important;
+            }
+        }
+    }
+}

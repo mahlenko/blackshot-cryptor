@@ -1,0 +1,12 @@
+.fake-control {
+    &-groups {
+        .form-control, .form-select {
+            border-color: transparent;
+        }
+        &:hover {
+            .form-control, .form-select {
+                border-color: $border-color;
+            }
+        }
+    }
+}
