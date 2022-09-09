@@ -7,6 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Установка
+
+Выполнить команду установки ```./vendor/bin/sail artisan anita:install``` если используется docker и sail. Или `php artisan anita:install`.
+После чего заменить дамп БД ```/dump-2022-04-12.sql```, чтобы восстановить проект до последнего состояния.
+
+**Панель администрирования:** /login
+
+- Пользователь: `admin@cryptor.com`
+- Пароль: `cr315920`
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
